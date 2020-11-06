@@ -1,6 +1,6 @@
 function main() {
     //Main program variables.
-    const m = document.querySelector(`main`);
+    const m = document.querySelector(`body`);
     //Support function for random numbers.
     function rgbRandom(){
         return Math.floor(Math.random() * 255);
