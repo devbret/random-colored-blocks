@@ -5,6 +5,17 @@ function main() {
     function rgbRandom(){
         return Math.floor(Math.random() * 255);
     }
+    //Creating and appending the info paragraph element to the body.
+    const innerP = document.createElement(`p`);
+    innerP.id = `innerP`;
+    m.appendChild(innerP);
+    //Enabling the info paragraph element to follow the mouse's position.
+    window.addEventListener(`mousemove`, function(e){
+        const x = e.clientX;
+        const y = e.clientY;
+        innerP.style.left = `${x + 15}px`;
+        innerP.style.top = `${y + 15}px`;
+    });
     //Where the main action takes place. Creating ten rows within the main element via a for loop.
     for (let i = 0; i < 10; i++) {
         const row = document.createElement(`div`);
@@ -30,6 +41,10 @@ function main() {
             } else {
                 block.style.width = `${rN - remainder}%`;
             }
+            //Update the info paragraph element with each block's respective width.
+            block.addEventListener(`mouseover`, function(){
+                innerP.innerHTML = `${block.offsetWidth}px wide`;
+            });
         }
     }
 }
