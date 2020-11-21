@@ -5,7 +5,7 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-body {
+#m {
     width: 100vw;
     height: 100vh;
     margin: auto;
@@ -31,4 +31,15 @@ body {
     font-weight: bolder;
     background-color: rgba(255,255,255,1);
     padding: 3px;
+}
+#generate {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 20000000000000000;
+    padding: 6px 8px;
+}
+#generate:hover {
+    cursor: pointer;
+    background-color: gold;
 }
